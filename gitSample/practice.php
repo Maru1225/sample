@@ -5,29 +5,29 @@ echo 'hello php!';
 <?php
  $a=3; $b=7;
  echo $a+$b;
- ?>
+
  
-<?php 
+
  $array_month=[
      "1月","2月","3月", "4月","5月","6月","7月","8月","9月","10月", "11月","12月"
  ];
  echo $array_month[7];
- ?>
+
  
- <?php
+
   $hello = "Hello,";
   $name = "Mayumi";
   $world = "'s World!";
   echo $hello . $name . $world;
-  ?>
+ 
   
-  <?php
-  $tech_boost = "tech";cd
+
+  $tech_boost = "tech";
    $tech_boost .= ' boost';
    echo $tech_boost;
-   ?>
+
    
-   <?php
+
    $calendar_2018 = [
   "January" => "1月",
   "February" => "2月",
@@ -43,5 +43,44 @@ echo 'hello php!';
   "December" => "12月"
    ];
    echo $calendar_2018 ["December"];
-   ?>
+   echo "\n";
+  
+   //PHP/Laravel 03 プログラムの実行を条件分岐構文と繰り返し構文で制御できるようになろうの課題は以下からです
    
+  //1
+   $name = "mayumi";
+   if ($name="mayumi"){
+    echo "私はあなたの名前です";
+   }else{ 
+     echo "あなたの名前ではありません";
+   
+   }
+   echo "\n";
+   
+  //2
+   $total = 0;
+   for($i = 1; $i <=10000; $i++){
+   $total += $i;
+   }
+   echo $total;
+   echo "\n";
+  
+   
+  //3
+  
+  $fruits =array("apple","orange","lemon","grapes","peach");
+  foreach($fruits as $value){
+   echo $value;
+   echo "\n";
+   
+  }
+  
+  //4
+  $start = 1;
+  $end = 100;
+  for($i = $start; $i <= $end; $i++){
+   if($i % 5==0){
+    echo $i;
+    echo "\n";
+   }
+  }
