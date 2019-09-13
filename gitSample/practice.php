@@ -49,7 +49,7 @@ echo 'hello php!';
    
   //1
    $name = "mayumi";
-   if ($name="mayumi"){
+   if ($name=="mami"){
     echo "私はあなたの名前です";
    }else{ 
      echo "あなたの名前ではありません";
@@ -69,8 +69,8 @@ echo 'hello php!';
   //3
   
   $fruits =array("apple","orange","lemon","grapes","peach");
-  foreach($fruits as $value){
-   echo $value;
+  foreach($fruits as $fruit){
+   echo $fruit;
    echo "\n";
    
   }
@@ -84,3 +84,5 @@ echo 'hello php!';
     echo "\n";
    }
   }
+  
+ 
