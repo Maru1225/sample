@@ -1,5 +1,5 @@
 
-@extends('layouts.admin')
+@extends('layouts.profile')
 
 
 {{-- admin.blade.phpの@yield('title')に'profile'を埋め込む --}}
