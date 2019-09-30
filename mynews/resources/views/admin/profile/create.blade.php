@@ -28,22 +28,40 @@
                     </div>
                   
                      
-                      
+                  
                     <div class="form-group row">
                         <label class="col-md-2" for="name">氏名</label>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                         </div>
                     </div>
-                    <div class="form-group row">
-                      <label class="col-md-2" for="gender">性別</label>
-        
-                      <div class="col-auto">
-                            <input type="text" class="form-control" name="gender" value="{{ old('gender') }}">
-                        </div>
-                    </div>
-                    
+                   
                   
+                  
+                  
+                 
+             <label class="form-check-label" for="gender">性別</label>
+　　
+            
+            <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="gender"  value="{{ old('gender'=='male' ? 'checked' : '' )}}">
+             <label class="form-check-label" for="otoko" accesskey="m">男</label>
+             </div>
+           <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="gender"  value="{{ old('gender'=='female' ? 'checked' : '' )}}">
+             <label class="form-check-label" for="onna" accesskey="f">女</label>
+             </div>
+             
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender"  value="{{ old('gender'=='not known' ? 'checked' : '' )}}">
+             <label class="form-check-label" for="fumei" accesskey="n">不明</label>
+             </div>
+           <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender"  value="{{ old('gender'=='not applica' ? 'checked' : '' )}}">
+               <label class="form-check-label" for="tekiyoufuyou" accesskey="no">適用不要</label>
+                  </div>
+
+　　　　　
                                    
                     <div class="form-group row">
                         <label class="col-md-2" for="hobby">趣味</label>
