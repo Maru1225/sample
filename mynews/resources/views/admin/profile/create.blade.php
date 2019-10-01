@@ -39,29 +39,27 @@
                   
                   
                   
-                 
+            
              <label class="form-check-label" for="gender">性別</label>
 　　
             
             <div class="form-check form-check-inline">
-             <input class="form-check-input" type="radio" name="gender"  value="{{ old('gender'=='male' ? 'checked' : '' )}}">
+             <input class="form-check-input" type="radio" name="gender"  value="male" {{ old('gender')==='male' ? 'checked' : ''}}>
              <label class="form-check-label" for="otoko" accesskey="m">男</label>
-             </div>
-           <div class="form-check form-check-inline">
-             <input class="form-check-input" type="radio" name="gender"  value="{{ old('gender'=='female' ? 'checked' : '' )}}">
-             <label class="form-check-label" for="onna" accesskey="f">女</label>
-             </div>
              
-              <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="gender"  value="{{ old('gender'=='not known' ? 'checked' : '' )}}">
+             <input class="form-check-input" type="radio" name="gender"  value="female" {{ old('gender')==='female' ? 'checked' : '' }}>
+             <label class="form-check-label" for="onna" accesskey="f">女</label>
+       
+             
+          
+              <input class="form-check-input" type="radio" name="gender"  value="not known" {{ old('gender')==='not known' ? 'checked' : '' }}>
              <label class="form-check-label" for="fumei" accesskey="n">不明</label>
-             </div>
-           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender"  value="{{ old('gender'=='not applica' ? 'checked' : '' )}}">
+         
+            <input class="form-check-input" type="radio" name="gender"  value="not applica" {{ old('gender')==='not applica' ? 'checked' : '' }}>
                <label class="form-check-label" for="tekiyoufuyou" accesskey="no">適用不要</label>
                   </div>
-
-　　　　　
+                
+　　　
                                    
                     <div class="form-group row">
                         <label class="col-md-2" for="hobby">趣味</label>
@@ -72,7 +70,7 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="introduction">自己紹介欄</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="15">{{ old('introduction') }}</textarea>
+                            <textarea class="form-control" name="introduction" rows="15">{{ old('introduction') }}</textarea>
                         </div>
                     </div>
                    
