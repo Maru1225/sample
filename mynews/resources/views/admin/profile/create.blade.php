@@ -23,7 +23,7 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="user_avatar">アバター</label>
                         <div class="col-md-10">
-                        <input type="file" class="form-control-file" name="user[avatar]" id="user_avatar" />
+                        <input type="file" class="form-control-file" name="user_avatar" id="user_avatar" />
                     </div>
                     </div>
                   
