@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 
 use App\Profile;
 
+use App\ProfileHistory;
+
+use Carbon\Carbon;
+
 class ProfileController extends Controller
 {
     
@@ -76,6 +80,7 @@ public function index(Request $request)
       if (isset($profile_form['user_avatar'])) {
         $avatar_path = $request->file('user_avatar')->store('public/image');
         $profile->user_avatar_path = basename($avatar_path);
+        
         unset($profile_form['user_avatar']);
       } elseif (isset($request->remove)) {
         $profile->user_avatar_path = null;
@@ -84,6 +89,11 @@ public function index(Request $request)
       unset($profile_form['_token']);
       
       $profile->fill($profile_form)->save();
+      
+       $profile_history = new ProfileHistory;
+        $profile_history ->profile_id = $profile->id;
+        $profile_history ->edited_at = Carbon::now();
+        $profile_history->save();
 
       return redirect('admin/profile');
   }
@@ -94,7 +104,7 @@ public function index(Request $request)
       $profile = Profile::find($request->id);
       
       $profile->delete();
-      return redirect('admin/profile/');
+      return redirect('admin/profile');
   }  
 
 
